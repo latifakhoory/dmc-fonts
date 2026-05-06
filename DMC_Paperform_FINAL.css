@@ -1,0 +1,466 @@
+/* ============================================================
+   DUBAI MEDIA COUNCIL — Paperform Custom CSS (FINAL)
+   Based on DMC Branding Guidelines (Aug 2023)
+   
+   Paste into: Theme → UI Elements → Custom CSS
+   ============================================================ */
+
+
+/* --- FONT DECLARATIONS --- */
+
+@font-face {
+    font-family: "Le Monde Livre";
+    src: url("https://github.com/latifakhoory/dmc-fonts/raw/refs/heads/main/LeMondeLivre-Normal.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Le Monde Livre";
+    src: url("https://github.com/latifakhoory/dmc-fonts/raw/refs/heads/main/LeMondeLivre-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Le Monde Livre";
+    src: url("https://github.com/latifakhoory/dmc-fonts/raw/refs/heads/main/LeMondeLivre-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "ABC Favorit Arabic";
+    src: url("https://github.com/latifakhoory/dmc-fonts/raw/refs/heads/main/ABCFavoritArabic-Book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ABC Favorit Arabic";
+    src: url("https://github.com/latifakhoory/dmc-fonts/raw/refs/heads/main/ABCFavoritArabic-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* ============================================================
+   HEADINGS
+   ============================================================ */
+
+h1.__header-one > * {
+    font-family: "Le Monde Livre", Georgia, serif !important;
+    font-weight: 700 !important;
+    color: #C8102E !important;
+    letter-spacing: 0.01em !important;
+}
+
+h2.__header-two > * {
+    font-family: "Le Monde Livre", Georgia, serif !important;
+    font-weight: 700 !important;
+    color: #C8102E !important;
+}
+
+
+/* ============================================================
+   BODY TEXT
+   ============================================================ */
+
+p > *,
+.LiveField__label,
+.LiveField__description {
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    color: #000000 !important;
+}
+
+
+/* ============================================================
+   TEXT INPUT FIELDS
+   ============================================================ */
+
+input[id^="field-text"],
+input[id^="field-email"],
+input[id^="field-number"],
+input[id^="field-phone"],
+input[id^="field-url"],
+textarea[id^="field-text"] {
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    border-bottom: 2px solid #EAD7C3 !important;
+    color: #000000 !important;
+    font-size: 1rem !important;
+}
+
+input[id^="field-text"]:focus,
+input[id^="field-email"]:focus,
+input[id^="field-number"]:focus,
+input[id^="field-phone"]:focus,
+input[id^="field-url"]:focus,
+textarea[id^="field-text"]:focus {
+    border-bottom: 2px solid #C8102E !important;
+}
+
+
+/* ============================================================
+   REMOVE DEFAULT BOX SHADOWS
+   ============================================================ */
+
+.btn-raised,
+.btn-raised:hover,
+.btn-raised:focus {
+    box-shadow: none !important;
+}
+
+
+/* ============================================================
+   QUESTION BLOCKS
+   ============================================================ */
+
+.Paperform__QuestionBlock {
+    border: 1px solid rgba(200, 16, 46, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+
+/* ============================================================
+   MULTIPLE CHOICE
+   ============================================================ */
+
+.Choices__choice {
+    border: 1.5px solid #EAD7C3 !important;
+    border-radius: 4px !important;
+    background: #FFFFFF !important;
+}
+
+.Choices__choice:hover {
+    border-color: #C8102E !important;
+    background: rgba(200, 16, 46, 0.03) !important;
+}
+
+.Choices__choice[aria-checked="true"] {
+    border-color: #C8102E !important;
+    background: rgba(200, 16, 46, 0.06) !important;
+}
+
+.Choices__label {
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    color: #000000 !important;
+}
+
+
+/* ============================================================
+   YES / NO BUTTONS
+   ============================================================ */
+
+.YesNo {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.YesNo .YesNo__button {
+    width: 49.5% !important;
+    padding: 1em 2em !important;
+}
+
+.YesNo__button,
+.YesNo__button:hover,
+.YesNo__button:focus,
+.YesNo__button.btn-raised.btn-primary {
+    box-shadow: none !important;
+    border: 1.5px solid #EAD7C3 !important;
+    border-radius: 4px !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    color: #000000 !important;
+    background: #FFFFFF !important;
+}
+
+.YesNo__button:hover {
+    border-color: #C8102E !important;
+    color: #C8102E !important;
+}
+
+.YesNo div.btn-raised.btn-primary:first-child {
+    background: #C8102E !important;
+    color: #FFFFFF !important;
+    border-color: #C8102E !important;
+}
+
+.YesNo div.btn-raised.btn-primary:last-child {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-color: #000000 !important;
+}
+
+
+/* ============================================================
+   DROPDOWN
+   ============================================================ */
+
+.LiveField__answer .Select-option {
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+.Select-menu-outer {
+    border: 1px solid #EAD7C3 !important;
+    border-radius: 4px !important;
+}
+
+.Select-option:hover {
+    background-color: rgba(200, 16, 46, 0.06) !important;
+    color: #C8102E !important;
+}
+
+.Select-value-label {
+    color: #000000 !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+}
+
+
+/* ============================================================
+   SLIDER
+   ============================================================ */
+
+[data-reach-slider-range] {
+    background: #C8102E !important;
+}
+
+.Slider__axis-label--min,
+.Slider__axis-label--max {
+    color: #000000 !important;
+}
+
+div[data-reach-slider-handle]::before {
+    color: #C8102E !important;
+}
+
+
+/* ============================================================
+   SCALE
+   ============================================================ */
+
+.Scale__track {
+    background-color: #EAD7C3 !important;
+}
+
+.Scale__checkbox-label-text {
+    color: #000000 !important;
+}
+
+
+/* ============================================================
+   RATING
+   ============================================================ */
+
+.Rating__icon-selected {
+    color: #C8102E !important;
+}
+
+.Rating__icon-unselected {
+    color: #EAD7C3 !important;
+}
+
+
+/* ============================================================
+   RANK
+   ============================================================ */
+
+.Rank__option {
+    border: 1px solid #EAD7C3 !important;
+    border-radius: 4px !important;
+}
+
+.Rank__option--selected {
+    border-color: #C8102E !important;
+}
+
+.Rank__order-selector {
+    color: #C8102E !important;
+    font-weight: 600 !important;
+}
+
+
+/* ============================================================
+   PRODUCTS
+   ============================================================ */
+
+.Product__label {
+    font-family: "Le Monde Livre", Georgia, serif !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+}
+
+.Product__price {
+    color: #C8102E !important;
+    font-weight: 600 !important;
+}
+
+
+/* ============================================================
+   APPOINTMENT / CALENDAR
+   ============================================================ */
+
+.Appointment__time-picker-inner .Appointment__time-button:hover {
+    background: #C8102E !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   FILE UPLOAD
+   ============================================================ */
+
+.MultipleFiles .BtnV2--raised {
+    border: 1.5px dashed #C8102E !important;
+    color: #C8102E !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+
+.MultipleFiles .BtnV2--raised:hover {
+    background-color: rgba(200, 16, 46, 0.04) !important;
+}
+
+
+/* ============================================================
+   SUBMIT BUTTON
+   ============================================================ */
+
+.submit {
+    background-color: #C8102E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 14px 40px !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em !important;
+    text-transform: uppercase !important;
+    box-shadow: none !important;
+}
+
+.submit:hover {
+    background-color: #A00D24 !important;
+}
+
+.GuidedModeInstructions__container--submit {
+    background-color: #C8102E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+}
+
+
+/* ============================================================
+   PAGINATION / NEXT / BACK BUTTONS
+   ============================================================ */
+
+.Pagination__btn,
+.Pagination__btn--next,
+.Pagination .btn-raised,
+.Pagination .btn-primary,
+.Pagination .btn-raised.btn-primary {
+    background-color: #C8102E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+}
+
+.Pagination__btn:hover,
+.Pagination__btn--next:hover,
+.Pagination .btn-raised:hover,
+.Pagination .btn-primary:hover {
+    background-color: #A00D24 !important;
+    color: #FFFFFF !important;
+}
+
+.Pagination__btn--previous {
+    background-color: #FFFFFF !important;
+    color: #C8102E !important;
+    border: 1.5px solid #C8102E !important;
+}
+
+.Pagination__btn--previous:hover {
+    background-color: rgba(200, 16, 46, 0.06) !important;
+}
+
+.GuidedModeInstructions__button:not(.GuidedModeInstructions__button--back),
+.GuidedModeInstructions__container button:not(.GuidedModeInstructions__button--back) {
+    background-color: #C8102E !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+}
+
+.GuidedModeInstructions__button:not(.GuidedModeInstructions__button--back):hover,
+.GuidedModeInstructions__container button:not(.GuidedModeInstructions__button--back):hover {
+    background-color: #A00D24 !important;
+    color: #FFFFFF !important;
+}
+
+.GuidedModeInstructions__button--back {
+    background-color: #FFFFFF !important;
+    color: #C8102E !important;
+    border: 1.5px solid #C8102E !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-family: "ABC Favorit Arabic", Helvetica, Arial, sans-serif !important;
+}
+
+.GuidedModeInstructions__button--back:hover {
+    background-color: rgba(200, 16, 46, 0.06) !important;
+}
+
+
+/* Catch-all for any remaining grey buttons */
+.btn-raised.btn-primary,
+.btn-raised.btn-default {
+    background-color: #C8102E !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+}
+
+.btn-raised.btn-primary:hover,
+.btn-raised.btn-default:hover {
+    background-color: #A00D24 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   ERROR MESSAGES
+   ============================================================ */
+
+.LiveField__error {
+    color: #C8102E !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+a {
+    color: #C8102E !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* ============================================================
+   SEPARATORS
+   ============================================================ */
+
+hr {
+    border: none !important;
+    border-top: 2px solid #C8102E !important;
+}
